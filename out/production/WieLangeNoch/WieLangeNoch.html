@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wie lange Noch</title>
+</head>
+<body>
+<h1>Wie lange Noch - HTML Edition</h1>
+<p>Aktueller Tag: <b id="day">Montag</b></p>
+<p>Aktuelle Lektion: <b id="subject">Modul 431</b></p>
+<p>Zeit bis Lektionsende: <b id="timeTillLesson">00:00</b></p>
+<p>Zeit bis Schulende: <b id="timeTillFinish">00:00</b></p>
+<script  type = "text/javascript">
+document.getElementById("day").innerHTML = new Date.toLocaleString("default", { weekday: "long" });
+
+</script>
+</body>
+</html>
