@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<link rel="stylesheet" href="WieLangeNochStyle.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wie Lange Noch - Web Edition</title>
+</head>
+<body>
+    <h1>Wie Lange Noch</h1>
+    <p id="day">Heutiger Tag: TAG</p>
+    <p id="lessonNow">Aktuelle Lektion: LEKTION</p>
+    <p id="timeTillLessonFinish">Zeit bis Lektionsende: ZEIT</p>
+    <p>Zeit bis Schulende: ZEIT</p>
+</body>
+<script>
+    var date = new Date();
+    var days = ["Montag", "Dienstag"];
+   /** var lessonsMonday = [
+        new Lesson(new Date(date.getFullYear(), date.getMonth(), date.getDate(), 7, 35, 0)),
+        new Lesson(new Date(date.getFullYear(), date.getMonth(), date.getDate(), 7, 35, 0)),
+        new Lesson(new Date(date.getFullYear(), date.getMonth(), date.getDate(), 7, 35, 0)),
+        new Lesson(new Date(date.getFullYear(), date.getMonth(), date.getDate(), 7, 35, 0)),
+        new Lesson(new Date(date.getFullYear(), date.getMonth(), date.getDate(), 7, 35, 0)),
+        new Lesson(new Date(date.getFullYear(), date.getMonth(), date.getDate(), 7, 35, 0)),
+
+
+    ] **/
+
+    if (date.getDay() < 3) {
+        document.getElementById("day").innerHTML = "Heutiger Tag: " + days[date.getDay() - 1];
+    } else {
+        document.write("Heute keine Schule!");
+    }
+
+    function getTimes() {
+        var time = new Date();
+
+    }
+
+    setInterval(getTimes, 1000);
+</script>
+</html>
